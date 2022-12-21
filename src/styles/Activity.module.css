@@ -1,0 +1,17 @@
+tr td:first-child {
+    width: auto;
+}
+
+.activityColumn {
+    background-color: #0a3b5c;
+}
+
+.cell {
+    cursor: cell;
+    background-color: #284152;
+    color: rgb(25, 158, 25);
+}
+
+.cell:hover {
+    background-color: #174a6d;
+}

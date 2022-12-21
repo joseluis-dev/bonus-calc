@@ -1,0 +1,15 @@
+.resultTableContiner {
+    margin: 0px 20px 20px 20px;
+}
+
+.tableHeader {
+    background-color: #01795b;
+}
+
+.resultBody td:first-child {
+    background-color: #0a3b5c;
+}
+
+.resultBody td:last-child {
+    background-color: #284152;
+}
