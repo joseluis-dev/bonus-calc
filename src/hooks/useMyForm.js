@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { trunc } from '../services/trunc'
 
 export function useMyForm() {
   const [result, setResult] = useState()
@@ -11,7 +12,7 @@ export function useMyForm() {
 
   useEffect(() => {
     if (isNaN(parseInt(bonus)) || isNaN(parseInt(activities))) return
-    const unitValue = Math.floor(bonus/activities)
+    const unitValue = trunc(bonus/activities, 2)
     // console.log('loop', unitValue)
     setResult(unitValue)
   }, [bonus, activities])
