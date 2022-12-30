@@ -1,7 +1,17 @@
-import React from 'react'
 import style from '../styles/InputForm.module.css'
+import { useEffect, useState } from 'react'
 
 function InputForm({ setBonus, activityChange, result }) {
+
+  const [activityValue, setActivityValue] = useState()
+
+  useEffect(() => {
+    if (!result) return
+    const stringResult = result.toString()
+    const indexOf = stringResult.indexOf('.')
+    const formatedResult = stringResult.slice(0, indexOf + 3)
+    setActivityValue(formatedResult)
+  }, [result])
 
   return (
     <>
@@ -28,7 +38,7 @@ function InputForm({ setBonus, activityChange, result }) {
           type="number" 
           disabled
           className={style.resultInput}
-          value={result}/>
+          value={activityValue}/>
       </form>
     </>
   )
